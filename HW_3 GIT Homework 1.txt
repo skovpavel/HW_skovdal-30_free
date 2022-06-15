@@ -1,0 +1,258 @@
+ 1. Создайте текстоовый файл как в первом ДЗ по Terminal.
+ 2. Сценарий перенесите в этот файл.
+ 3. На против каждого действия - напишите команду в GitBash
+
+JSON
+ 4. Создать внешний репозиторий c названием JSON.
+https://github.com/ > Recent Repositories - NEW > JSON
+
+ 5. Клонировать репозиторий JSON на локальный компьютер.
+github> JSON > code https copy
+gitbash:
+git clone https://github.com/skovpavel/JSON.git
+..
+Receiving objects: 100% (3/3), done.
+
+ 6. Внутри локального JSON создать файл “new.json”.
+cd JSON && touch new.json
+
+ 7. Добавить файл под гит.
+git add new.json
+
+ 8. Закоммитить файл.
+git commit -m "add empty new.json"
+
+ 9. Отправить файл на внешний GitHub репозиторий.
+git push
+
+ 10. Отредактировать содержание файла “new.json” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате JSON.
+vim new.json
+cat new.json
+{
+        "name":"Pavel Vladimirovich Skovdal",
+        "age":134,
+        "pets":0,
+        "future salary":"5k$"
+}
+
+ 11. Отправить изменения на внешний репозиторий.
+git add new.json
+git commit -m "name/age/pets/sal data was added to the new.json"
+git push
+
+ 12. Создать файл preferences.json
+touch preferences.json
+
+ 13. В файл preferences.json добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате JSON.
+touch preferences.json
+vim preferences.json
+cat preferences.json
+{
+        "movie":"Brother",
+        "TV series":"Game of Thrones",
+        "dish":"steak",
+        "season":"summer",
+        "country":"seychelles"
+}
+
+ 14. Создать файл sklls.json добавить информацию о скиллах которые будут изучены на курсе в формате JSON
+touch skills.json && vim skills.json
+cat skills.json
+{
+        "skills":"1. Базовая теория (Что такое тестирование, багрепорты, документация, виды, методы, направления тестирования и т.п.) SDLC, STLC.\n 2. Что такое клиент-серверная архитектура.\n 3. HTTP Методы запросов на сервер.\n 4. Коды ответов HTTP сервера.\n 5. Структуры HTTP запросов и ответов.\n 6. Что такое JSON, XML. Их структура.\n 7. Тестирование API через Postman (JS, автотесты API).\n 8. Снятие и чтение логов c внешнего сервера.\n 9. Снифинг http web трафика через Charles и Fiddler.\n 10. Dev Tools веб браузеров (Google Chrome, FireFox).\n 11. VPN. (Как работает, зачем нужен, как использовать, варианты инструментов)\n 12. Мобильное тестирование.\n 13. Особенность iOS, Android, гайдлайны.\n 14. Сборка iOS приложений на XCode. (У кого нет Mac компьютера, просто посмотрят)\n 15. Сборка Android приложений на Android Studio.\n 16. ADB (управление андройд девайсами).\n 17. Настройка прокси и vpn на iOS и Android.\n 18. Перехват (сниффинг) мобильного трафика через Charles и Fiddler на iOS и Android.\n 19. Командная строка (terminal) Linux (копирование, создание, просмотр, перемещение файлов на серверах без графического интерфейса)\n 20. Основы bash скриптинг, автоматизация рутинных задач на сервере.\n 21. Доступ к удалённым серверам.\n 22. Основы SQL (Create, Delete, Drop, Insert Into, Select, From, Where, Join).\n 23. База данных Postgres (установка, настройка и использование).\n 24. Нереляционная база данных Redis (установка, настройка и использование).\n 25. Нагрузочное тестирование в Jmeter.\n 26. Методология разработки Scrum.\n 27. Python. (Изучение основ. Создание клиент серверного приложения)\n"
+}
+
+ 15. Отправить сразу 2 файла на внешний репозиторий.
+git add .
+git commit -m "preferences.json skills.json were created and data was added to them"
+git push
+
+ 16. На веб интерфейсе создать файл bug_report.json.
+ 17. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+github > JSON > aad file - create new file > commit new file comment: bug_report.json was created - commit new file
+
+ 18. На веб интерфейсе модифицировать файл bug_report.json, добавить баг репорт в формате JSON.
+ 19. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+github > JSON > bug_report.json > edit this file - add data > commit changes comment - data bug report was added - commit changes
+ 
+ 20. Синхронизировать внешний и локальный репозиторий JSON
+git pull
+cat bug_report.json
+{
+        "ID": "A1",
+        "Title": "Регистрация нового пользователя на главной странице",
+        "Project": "Обучающий портал",
+        "STR": [
+                "1. Зайти на главную страницу сайта (ссылка_на_сайт)",
+                "2. Нажать кнопку Регистрация"
+        ],
+        "Enviroment":
+        {
+                "OS": "Windows 10 x64 v21H1 build 19043.1741",
+                "Browser": "Google Chrome v102.0.5005.63 x64"
+        },
+        "Component": "Кнопка Регистрация",
+        "Build": "0.3.3",
+        "Actual result": "Нажатие кнопки Регистрация НЕ перенаправляет на Форму регистрации",
+        "Expected result": "Нажатие кнопки Регистрация перенаправляет на Форму регистрации",
+        "Severity": "Critical",
+        "Priority": "High",
+        "Status": "Open",
+        "Author": "Павел Сков",
+        "Attachments": "картинка/gif/видео бага(или ссылка)"
+}
+
+XML
+ 21. Создать внешний репозиторий c названием XML.
+https://github.com/ > Recent Repositories - NEW > XML
+
+ 22. Клонировать репозиторий XML на локальный компьютер.
+github> XML > code - https copy
+gitbash:
+git clone https://github.com/skovpavel/XML.git
+
+ 23. Внутри локального XML создать файл “new.xml”.
+cd XML && touch new.xml
+
+ 24. Добавить файл под гит.
+git add new.xml
+
+ 25. Закоммитить файл.
+git commit -m "empty new.xml was created"
+
+ 26. Отправить файл на внешний GitHub репозиторий.
+git push
+
+ 27. Отредактировать содержание файла “new.xml” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате XML
+vim new.xml
+cat new.xml
+<data>
+        <name>Pavel Skovdal</name>
+        <age>115</age>
+        <pets>000</pets>
+        <salary>1billion</salary>
+</data>
+
+ 28. Отправить изменения на внешний репозиторий.
+git add new.xml && git commit -m "data was added to the new.xml" && git push
+
+ 29. Создать файл preferences.xml
+touch preferences.xml
+
+ 30. В файл preferences.xml добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате XML.
+vim preferences.xml
+cat preferences.xml
+<pref>
+        <movie>Cloud Atlas</movie>
+        <tvseries>Shameless</tvseries>
+        <dish>Kebab</dish>
+        <season>Winter</season>
+        <country>Texas</country>
+</pref>
+
+ 31. Создать файл sklls.xml добавить информацию о скиллах которые будут изучены на курсе в формате XML
+touch skills.xml && vim skills.xml
+cat skills.xml
+<skills>
+        <data>1. Базовая теория (Что такое тестирование, багрепорты, документация, виды, методы, направления тестирования и т.п.) SDLC, STLC.<br/> 2. Что такое клиент-серверная архитектура.<br/> 3. HTTP Методы запросов на сервер.<br/> 4. Коды ответов HTTP сервера.<br/> 5. Структуры HTTP запросов и ответов.<br/> 6. Что такое JSON, XML. Их структура.<br/> 7. Тестирование API через Postman (JS, автотесты API).<br/> 8. Снятие и чтение логов c внешнего сервера.<br/> 9. Снифинг http web трафика через Charles и Fiddler.<br/> 10. Dev Tools веб браузеров (Google Chrome, FireFox).<br/> 11. VPN. (Как работает, зачем нужен, как использовать, варианты инструментов)<br/> оздание клиент серверного приложения)<br/>"12. Мобильное тестирование.<br/> 13. Особенность iOS, Android, гайдлайны.<br/> 14. Сборка iOS приложений на XCode. (У кого нет Mac компьютера, просто посмотрят)<br/> 15. Сборка Android приложений на Android Studio.<br/> 16. ADB (управление андройд девайсами).<br/> 17. Настройка прокси и vpn на iOS и Android.<br/> 18. Перехват (сниффинг) мобильного трафика через Charles и Fiddler на iOS и Android.<br/> 19. Командная строка (terminal) Linux (копирование, создание, просмотр, перемещение файлов на серверах без графического интерфейса)<br/> 20. Основы bash скриптинг, автоматизация рутинных задач на сервере.<br/> 21. Доступ к удалённым серверам.<br/> 22. Основы SQL (Create, Delete, Drop, Insert Into, Select, From, Where, Join).<br/> 23. База данных Postgres (установка, настройка и использование).<br/> 24. Нереляционная база данных Redis (установа, настройка использование).<br/> 25. Нагрузочное тестирование в Jmeter.<br/> 26. Методология разработки Scrum.<br/> 27. Python. (Изучение основ. Создание клиент серверного приложения)<br/> </data>
+</skills>
+
+ 32. Сделать коммит в одну строку.
+git add . && git commit -m "preferences.xml & skills.xml were created and filled with data"
+
+ 33. Отправить сразу 2 файла на внешний репозиторий.
+git push
+
+ 34. На веб интерфейсе создать файл bug_report.xml.
+ 35. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+github > XML > add file - create new file > commit new file comment: bug_report.xml was created - commit new file
+
+ 36. На веб интерфейсе модифицировать файл bug_report.xml, добавить баг репорт в формате XML.
+ 37. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+github > XML > bug_report.xml > edit this file - add data > commit changes comment - data bug report was added - commit changes
+
+ 38. Синхронизировать внешний и локальный репозиторий XML
+git pull
+cat bug_report.xml
+<data>
+  <ID>A1</ID>
+  <title>Регистрация нового пользователя на главной странице</title>
+  <project>Обучающий портал</project>
+  <STR>1. Зайти на главную страницу сайта (ссылка_на_сайт) <br /> 2. Нажать кнопку Регистрация </STR>
+  <envir>OS: Windows 10 x64 v21H1 build 19043.1741 <br />Browser: Google Chrome v102.0.5005.63 x64 </envir>
+  <comp>Component: Кнопка Регистрация </comp>
+  <build>Build: 0.3.3</build>
+  <actres>Actual result: Нажатие кнопки Регистрация НЕ перенаправляет на Форму регистрации </actres>
+  <expectres>Expected result: Нажатие кнопки Регистрация перенаправляет на Форму регистрации</expectres>
+  <sev>Severity: Critical</sev>
+  <prior>Priority: High</prior>
+  <stat>Status: Open</stat>
+  <auth>Author: Павел Сков</auth>
+  <att>Attachments: "картинка/gif/видео бага(или ссылка)</att>
+</data>
+
+TXT
+ 1. Создать внешний репозиторий c названием TXT.
+https://github.com/ > Recent Repositories - NEW > TXT
+
+ 2. Клонировать репозиторий TXT на локальный компьютер.
+github> XML > code - https copy
+gitbash:
+git clone https://github.com/skovpavel/TXT.git
+
+ 3. Внутри локального TXT создать файл “new.txt”.
+cd TXT && touch new.txt
+
+ 4. Добавить файл под гит.
+git add .
+
+ 5. Закоммитить файл.
+git commit -m "empty new.txt was created"
+
+ 6. Отправить файл на внешний GitHub репозиторий.
+git push
+
+ 7. Отредактировать содержание файла “new.txt” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате TXT.
+vim new.txt
+cat new.txt
+Pavel Skovdal
+129 y.o.
+pets none
+500k salary
+
+ 8. Отправить изменения на внешний репозиторий.
+git add . && git commit -m "data was added to the new.txt" && git push
+
+ 9. Создать файл preferences.txt
+touch preferences.txt
+
+ 10. В файл preferences.txt” добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате TXT.
+vim preferences.txt
+cat preferences.txt
+Movie: Autoreiji
+TV series: A cop from Rublevka
+Dish: Borsch
+Season: Spring
+Country: Austria
+
+ 11. Создать файл sklls.txt добавить информацию о скиллах которые будут изучены на курсе в формате TXT
+touch skills.txt && nano skills.txt
+cat skills.txt
+
+
+ 12. Сделать коммит в одну строку.
+git add . && git commit -m "preferences.xml & skills.xml were created and filled with data"
+
+ 13. Отправить сразу 2 файла на внешний репозиторий.
+git push
+
+ 14. На веб интерфейсе создать файл bug_report.txt.
+ 15. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+github > TXT > add file - create new file > commit new file comment: bug_report.txt was created - commit new file
+ 
+ 16. На веб интерфейсе модифицировать файл bug_report.txt, добавить баг репорт в формате TXT.
+ 17. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+github > TXT > bug_report.xml > edit this file - add data > commit changes comment - data bug report was added - commit changes
+
+ 18. Синхронизировать внешний и локальный репозиторий TXT
+git pull
